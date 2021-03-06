@@ -1,0 +1,257 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Plantilla Anteproyecto de Grado
+% Leonel Muñoz Cedano (c) 2017
+% MCIC - Ingeniería de Software
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Nombre del proyecto: 
+% Autores: 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[11pt,letterpaper,oneside]{article}
+\documentclass[11pt,letterpaper,oneside]{article}
+
+% Inclusion de paquetes
+\usepackage[utf8x]{inputenc} % Tildes
+\usepackage{url}
+
+%%%% Inicio - Tipo letra Arial - por defecto es (Times New Roman) %%%
+\usepackage[T1]{fontenc}
+\usepackage{uarial}
+\renewcommand{\familydefault}{\sfdefault}
+%%% fin - Tipo de letra %%%%
+
+%%%%  inicio - Formato a las secciones del documento %%%%%%%
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\bfseries} {\Large\thesection}{14pt}{\Large\filcenter }[{\vspace{0.5mm}\titlerule[0.1pt]}]
+
+%%% Configuración El espaciado anterior es de 0 pt y el posterior de 12 pt %%%%
+\titlespacing\section{0pt}{14pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+\titlespacing\subsection{15pt}{12pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{30pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+%%%%  fin - Formato a las secciones del documento %%%%%%%
+\usepackage{graphicx, subfigure} % Graficas EPS
+%\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsthm} % Simbolos
+\usepackage{setspace} % Ajustes de espacio
+\usepackage{subfigure} % Sub-figuras
+\usepackage[vcentering]{geometry} % Margenes
+\usepackage{algorithm,algorithmic} % Algoritmos
+\usepackage{multirow,multicol,longtable} % Tablas
+\usepackage{caption} % Leyendas en tablas 
+\usepackage{ragged2e} %Paquete para justificar texto 
+\usepackage{pst-node, pst-plot, pst-arrow}	% Dibujos, graficas  
+\usepackage{booktabs, tabularx, xltabular}
+\usepackage{array}
+%\usepackage{IEEEtran}
+%\usepackage{natbib} % Citaciones APA
+%\bibliographystyle{apalike}
+
+\usepackage{lipsum} % Bla bla bla
+\usepackage[linktoc=page,colorlinks]{hyperref} % Enlaces 
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=blue,
+	citecolor = blue,      
+	urlcolor=blue,
+}
+\usepackage{makeidx} % Producir indice
+
+%%% Inicio de configuración encabezcado y pie de página%%%%%%%%%%%%%
+\usepackage{color,colortbl} % Color para el encabezado
+
+
+\definecolor{Black}{rgb}{0,0,0}
+
+\usepackage{fancyhdr} %Encabezado y pie de página
+\pagestyle{fancy}
+\fancyhf{}
+%E: even page (página par)
+%O: odd page (página impar)
+%L: left field (campo izquierdo)
+%C: center field (campo central)
+%R: right field (campo derecho)
+%H: header (encabezado)
+%F: footer (pie de página)
+%\footnotesize - tamaño letra 
+%\textit - letra cursiva
+% Encabezado  \fancyhead
+\fancyhead[LO,LE]{\textit{\footnotesize{{\color{gray}Construcción de un espacio virtual con material de apoyo y ejercicios reproducibles para las prácticas de Machine Learning e Inteligencia Artificial}}}}
+%pie de página \fancyfoot , el número de página
+\fancyfoot[CO,CE]{Página | \thepage} 
+%%\renewcommand{\headrulewidth}{0.4pt} Linea debajo del encabezado
+\renewcommand{\headrulewidth}{0pt}
+%%% fin de configuración encabezcado y pie de página %%%%%%%%%%%%%
+
+\makeindex
+
+% Margenes y otras configuraciones
+%\geometry{letterpaper,left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\geometry{letterpaper,left=3cm,right=3cm,top=3cm,bottom=3cm}
+\captionsetup{width=.9\textwidth,font=footnotesize,labelfont=bf}
+\graphicspath{{figs/}}
+
+% Referencias cruzadas
+\newcommand{\figref}[1]{\mbox{Figura \ref{#1}}}
+\newcommand{\secref}[1]{\mbox{Sección \ref{#1}}}
+\newcommand{\algref}[1]{\mbox{Algoritmo \ref{#1}}}
+\newcommand{\tabref}[1]{\mbox{Tabla \ref{#1}}}
+\renewcommand{\eqref}[1]{\mbox{Ecuación (\ref{#1})}}
+\renewcommand{\tablename}{Tabla} 
+\renewcommand\listfigurename {LISTA DE FIGURAS}
+\renewcommand\listtablename{LISTA DE TABLAS}
+\renewcommand\refname{REFERENCIAS}
+\renewcommand\contentsname{TABLA DE CONTENIDO}
+\renewcommand\indexname{ÍNDICE}
+
+\renewcommand{\figurename}{Figura} 
+
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+\renewcommand{\arraystretch}{1.2}% for the vertical padding
+%\renewcommand\thefigure{\arabic{section}.\arabic{figure}} % Genera numeración X.Y
+%\renewcommand\thetable{\arabic{section}.\arabic{table}} % Genera numeración X.Y
+
+
+%Luego:
+%\numberwithin{equation}{chapter}
+%\numberwithin{figure}{chapter}
+%Cuando escribo la primera ecuacion o cuando inserto la primera figura escribo:
+%\setcounter{chapter}{x}
+%Donde x es el capitulo en el que esta la figura y/o la ecuacion.
+%Saludos
+
+
+%%%%% Inicio - Imagen logo de la U como marca de agua %%%%%%%%%%%%%%%%%%
+\usepackage[pages=some]{background}
+\backgroundsetup{
+	scale=1, %escala de la imagen, es recomendable que sea del mismo tamaño que el pdf
+	color=black, %fondo a usar para transparencia
+	opacity=0.1, %nivel de transparencia
+	angle=0, %en caso de querer una rotación
+	contents={%
+		\includegraphics[width=15cm,height=15cm]{./figs/logo_u.pdf} %nombre de la imagen a utilizar como fondo
+	}%
+}
+%%%%% Fin - Imagen logo de la U como marca de agua %%%%%%%%%%%%%%%%%%
+
+%%%% Inicio - justificar texto sin partir palabras ej:  amigo  ami- go %%%%%%
+\pretolerance=10000
+\setlength{\emergencystretch}{15em}
+%\pretolerance=2000
+%\tolerance=3000
+\newenvironment{tolerant}[1]{%
+	\par\tolerance=#1\relax
+}{%
+	\par
+}
+%%%% fin - justificar texto sin partir palabras ej:  amigo  ami- go %%%%%%
+
+
+% Cuerpo del documento
+\begin{document}
+\pretolerance=2000
+\tolerance=3000
+% Portada
+\include{presentacion/portada}
+
+% Tabla de contenidos
+\newpage
+\thispagestyle{empty}
+\begin{center}
+\onehalfspacing %interlineado 1,5
+\tableofcontents
+\end{center}
+
+
+% Lista de figuras
+\newpage
+\begin{center}
+\onehalfspacing %interlineado 1,5 
+\listoffigures
+\end{center}
+
+% Lista de tablas
+\newpage
+\begin{center}
+\onehalfspacing %interlineado 1,5 
+\listoftables
+\end{center}
+
+% Resumen
+\onehalfspacing %interlineado 1,5
+\include{presentacion/resumen}
+
+% Palabras clave
+\onehalfspacing %interlineado 1,5
+\include{presentacion/palabras_clave}
+
+% Resumen
+\include{presentacion/direccion}
+
+
+%Planteamiento del problema
+%\onehalfspacing %interlineado 1,5
+\include{presentacion/problema}
+
+% Objetivos
+\onehalfspacing %interlineado 1,5
+\include{presentacion/objetivos}
+
+% Justificación del proyecto
+%\onehalfspacing %interlineado 1,5
+%\include{presentacion/justificacion}
+
+% Marco referencia
+\include{marco/referencia}
+
+
+% Marco metodologico
+\include{marco/metodologico}
+
+% Impacto y resultados
+\include{marco/impacto}
+
+% Tiempos y recursos
+\include{marco/tiempo_recursos}
+
+% Limitacion del problema 
+%\include{marco/limitacion}
+ 
+% Bibliografia
+\newpage
+\addcontentsline{toc}{section}{REFERENCIAS}
+\begin{center}
+
+\vspace{10.5cm}
+\singlespace %interlineado 1
+%\bibliographystyle{apalike}
+%\bibliography{biblio}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,biblio}
+\end{center}
+
+% Anexos
+%\newpage
+%\section*{\begin{center}
+%ANEXOS
+%\end{center}}
+%\addcontentsline{toc}{section}{ANEXOS}
+
+%\section*{A. ANEXO 1}
+%\lipsum[1]
+
+%\section*{B. ANEXO 2}
+%\lipsum[1]
+
+%\addcontentsline{toc}{section}{ÍNDICE}
+\printindex
+
+\end{document}
+
+

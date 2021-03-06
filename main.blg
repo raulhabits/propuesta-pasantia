@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+A level-1 auxiliary file: presentacion/portada.aux
+A level-1 auxiliary file: presentacion/direccion.aux
+A level-1 auxiliary file: presentacion/resumen.aux
+A level-1 auxiliary file: presentacion/palabras_clave.aux
+A level-1 auxiliary file: presentacion/problema.aux
+A level-1 auxiliary file: presentacion/objetivos.aux
+A level-1 auxiliary file: marco/referencia.aux
+A level-1 auxiliary file: marco/metodologico.aux
+A level-1 auxiliary file: marco/impacto.aux
+A level-1 auxiliary file: marco/tiempo_recursos.aux
+The style file: IEEEtran.bst
+Database file #1: IEEEabrv.bib
+Database file #2: biblio.bib
+I was expecting a `,' or a `}'---line 103 of file biblio.bib
+ :  
+ :  year = {2002}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 114 of file biblio.bib
+ :  
+ :  year = {2007}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 125 of file biblio.bib
+ :  
+ :  year = {2008}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 136 of file biblio.bib
+ :  
+ :  year = {2016}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 148 of file biblio.bib
+ :  
+ :  year = {2018}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in GrupoDeInvestigacionLaser
+Warning--empty year in GrupoDeInvestigacionLaser
+Warning--empty journal in Coursera
+Warning--empty year in Coursera
+Warning--empty journal in Udemy
+Warning--empty year in Udemy
+Warning--empty journal in Jupyter
+Warning--empty year in Jupyter
+Warning--empty journal in GoogleColab
+Warning--empty year in GoogleColab
+Warning--empty journal in R
+Warning--empty year in R
+Warning--empty year in EstadisticaDescriptiva
+Warning--empty year in ModeloRegresionLineal
+Warning--empty year in Aprendizaje
+Warning--empty year in RedesNeuronales
+Warning--empty year in RedesNeuronalesConvolucionales
+
+Done.
+(There were 5 error messages)
